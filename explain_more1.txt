@@ -1,0 +1,121 @@
+
+THIS TUTORIAL IS FOR BEGINNERS, FOR HOW TO DOWNLOAD THE PRODUCT FROM GITHUB AND
+INSTALL IT ON YOUR HOME COMPUTER.
+Experienced CSS developers who have used GitHub before may not need this tutorial.
+
+This tutorial is for the client-side version of Javascript DRAW, where you 
+download the software directly from GitHub, and install it on your computer, 
+and then use it and practice with it (by clicking on page.html). 
+There will also be the server-side version, where a server application hosts
+Javascript DRAW and controls it for you. More about that later.
+
+Javascript DRAW is for quickly and intuitively drafting up web pages, 
+partitioning the web page into sections and putting photos and text (including
+text that has HTML markup) into the sections. It is a web page builder.
+
+Javascript DRAW is intended for two audiences:
+1. People who want to create a web page and know very little HTML, very little
+CSS, and no Javascript.
+2. CSS developers, who want an alternative to the current range of CSS frameworks
+out there. You can draft up a web page, print out the resulting HTML & CSS, and , 
+if you wish, make modifications to the printed-out HTML/CSS.
+
+For the client-side version of Javascript DRAW, you have to download the product,
+as a single zip file, from my GitHub account. Then you have to open up the zip file,
+extracting the contents, so that page.html and all the supporting files and 
+sub-directories are ready to use.
+
+So you first have to go to my account, www.github.com/robertwilkins and from there
+go to one of the repositories, the JavascriptDRAW repository. While CSS developers 
+should have no problem navigating github.com, GitHub has a user interface and user
+experience that is cluttered, a bit noisy, and not very intuitive. 
+The main purpose of this tutorial file is to explain to beginners how to download 
+and install the software.
+
+OK, so go to www.github.com/robertwilkins and click on JavascriptDRAW to move to the
+JavascriptDRAW repository.
+Near the top-right corner of the github page, but a bit closer to the center of the page
+than the top-right corner itself, you will see two buttons next to each other,
+"Go to file" and "Code" . The "Code" button should be green.
+Click on the "Code" button, and then click on "Download ZIP".
+
+After clicking on "Download ZIP", assuming you are using a Windows PC, one of two 
+things will happen. Either the zip file immediately goes to the subdirectory
+This PC -> Downloads  (the name of the file should be JavascriptDRAW-main), 
+or, before downloading the file, your PC presents to you a "Save File As"-style 
+data entry panel, where you must fill out three data entry boxes.
+
+If the data entry panel is skipped, and the zip file is immediately saved to your 
+computer, look in This PC -> Downloads directory. You can change the name of the file, 
+and you can move the file to whatever directory you choose.
+
+If your PC displays this data entry box, do this:
+Choose a directory on your home computer, such as This PC -> Documents.
+Choose a filename for the zip-file that you are saving to your computer,
+such as "zipfile01" , (without the quotes of course).
+There is a third data entry box, where it says "Save as type" , and the default value
+is already displayed as "Compressed (zipped) folder". Leave the third data entry box 
+alone.
+There will be a button at the bottom of the data entry panel, saying
+"OK" or "Save". Click on that, the data entry panel disappears, and the zip file 
+is saved to your PC.
+
+THE ZIP FILE HAS NOW BEEN DOWNLOADED ONTO YOUR HOME COMPUTER.
+
+Open up the file manager for your computer, if it's Windows, that will be 
+File Explorer. Go to the directory where the zip file is stored.
+Right click on the zipfile, and click on the "Extract All ..." option.
+
+A second data entry panel will show up, where on the top is displayed the message:
+Extract Compressed (Zipped) Folder
+Select a Destination and Extract Files
+
+On this data entry panel, there is a single data entry box, above which is the 
+description: Files will be extracted to this folder:
+(So, in this data entry box, you choose which directory to put the contents of the 
+zip file in.)
+
+The default value in this data entry box will look something like
+C:\Users\public7\Documents\zipfile01   or
+C:\Users\public7\Documents\JavascriptDRAW-main
+You may keep the default value if you wish, what will happen then is the files you need,
+including page.html, will be put in
+C:\Users\public7\Documents\JavascriptDRAW-main\JavascriptDRAW-main
+(but that's easy to fix, if you know Windows directories, and how to move files.)
+
+If you choose for that data entry box:
+C:\Users\public7\Documents
+then the files and sub-directories you need will go into:
+C:\Users\public7\Documents\JavascriptDRAW-main
+
+In any case, once you have chosen the directory to specify in the data entry panel,
+click on "Extract", and the contents of the zip file will be opened up in 
+your chosen destination.
+In your chosen destination, you will see:
+page.html
+code (a sub-folder)
+photos (another sub-folder)
+Other files you will see, in the same folder as page.html, are
+content.js
+some_options.js
+explain_to_me.txt
+explain_more1.txt  (this file you are reading)
+small_entity_license.txt (the license for this software)
+
+Click or right-click on page.html and you can IMMEDIATELY start practicing with 
+the JavascriptDRAW tool! Have fun.
+(What you see at the very beginning is just one box, the very beginning of the web page
+you will draw up, and below that box, the user interface panel with options for 
+putting smaller boxes inside the initial box, putting images and text into the boxes, 
+and so forth.)
+explain_to_me.txt gives you more knowledge for how the user interface for 
+JavascriptDRAW works.
+
+
+
+
+The language of this tutorial is for beginners. I know that if you are already familiar with GitHub, or already have experience downloading zip files (and extracting the contents
+in a directory on your home PC), or have some experience with the basics of a Windows PC, 
+then you might find the language to be wordy, long and tedious.
+
+

@@ -1,0 +1,201 @@
+
+/// Copyright 2023 : Robert Wilkins, graduated from Newton North High School 
+///                  in 1984, in Massachusetts, USA 
+
+This is a very powerful and flexible web page builder.
+It has a variety of features that I will try to explain here.
+To practice with this product, open "page.html" in a web browser (most of the testing
+I have done was using Google Chrome).
+
+You start with one box. The web page you are drafting at that point
+is just one box. You divide that box into smaller boxes (either 
+vertically or horizontally). Any of the smaller boxes that contain 
+nothing (no boxes inside, and no content (no photos or text)), can
+be further subdivided into smaller boxes. Once you've subdivided into
+the boxes you want, you put content (images and HTML-formatted text)
+into the boxes. You may put content into any box that is not further
+sub-divided into smaller boxes. Every box has a chosen width and height
+(minimum height actually, since content can force columns to become 
+taller).
+
+There are two general-purpose user panels you need to know:
+The first, which you will see right away (as soon as you open the 
+"page.html" file in a browser) looks like:
+
++ - >> <<  hue   Panel Lock    Explain
+"*" Browse for images , plain text, HTML
+"*" Type a section of plain text or HTML
+"*" Put content into this box (text, HTML, images)
+"*" Split this box into smaller boxes
+"*" Other modifications to this box
+
+By pressing the last button ( "Other modifications to this box" )
+you switch to the second general user panel, which looks like:
+
+"Resize"      Modify widths (or heights) of boxes inside this box
+"Insert"      Insert box into this box
+"Empty"       Empty this box (but box itself stays)
+"Delete"      Delete this box (and everything in it)
+"Copy->clip"  Copy this box to clipboard. Short description required:
+"Clip->box"   Copy from clipboard to this box (show clipboard)
+"PrintCSS"    Send css to text box so I can copy/paste it
+
+OK, let's start with the first user panel.
+In the first row, you see the navigation buttons:
+"+" , "-" , ">>" , "<<" .
+At any time, one and only one of the boxes is the 
+"current box of focus" . When you make changes to a box, you 
+are making changes to the box in focus. The box in focus has a 
+yellow dotted outline, the other boxes do not. Also, the user 
+panel is (usually) at the bottom of the box in focus (though use of 
+the "Panel Lock" button can change that).
+If a box has no inner boxes (but it may have content (images or text)),
+you can make that box the box of focus simply by clicking on it.
+To make a parent box the box of focus, you need the navigation buttons.
+"+" moves from a container box to the first of it's children.
+"-" moves from a child box to it's container.
+If box A contains boxes B, C, and D (i.e., B, C, and D are "siblings"),
+to move between B, C, and D, use the ">>" and "<<" buttons.
+
+The "Panel Lock" button, entirely optional, stops the user panel from 
+moving around every time you change the box of focus. If box H is a medium
+sized box, and there are many small boxes inside H, you might want to 
+freeze the user panel at the bottom of H while you move around among the
+boxes inside H. The "Panel Lock" button is entirely optional.
+
+The "hue" button shows a user panel that lets you make custom changes to
+the margins, borders, and padding (if you know CSS, some users will not 
+know that much CSS), as well as border color and style and background color.
+
+The "*" button next to "Browse for images or text" takes you to secondary web page
+that contains an inventory of available photos and text samples. You click 
+on the samples that you want to collect. The collected items go to an area
+I call the "Tray", and from this "Tray" you select text or photos to put in
+the boxes in the web page you are creating. When you return to the main page
+from the "Inventory" page, the user panel you see, instead of the general 
+user panel, is the "Tray" user panel, a list of images and text samples that
+you have collected. With the "Tray" user panel, you choose items to put in 
+one of your boxes.
+At the moment, for the client-side version of Javascript DRAW, the inventory 
+page contains a small list of photos and text samples purely for testing and 
+teaching. But you can change that easily (see below).
+You can change that by editing the content.js file and putting new photos 
+into the /photos subdirectory.
+
+The "*" button next to "Type a section of plain text" brings you to a large 
+input text box where you can type plain text and text interspersed with HTML 
+markup. This typed content can then go straight into your boxes.
+
+The "*" button next to "Put content into this box" shows you the "Tray" user
+panel, a list of items you can put into your box (both text and photos). If 
+you have not yet used the "Browse for images or text", the Tray will still be 
+empty and you must do that to fill the Tray with items.
+
+The "*" button next to "Split this box into smaller boxes" does just that.
+You must choose the number of new smaller boxes, whether horizontally or 
+vertically , and the widths (or heights) of the new inner boxes. 
+
+The last button, next to "Other modifications to this box" simply shows the 
+second "general-purpose" user panel, whose buttons I explain below:
+
+The "Resize" button allows you to modify the widths (or heights) of the inner 
+boxes inside the box of focus. You are constrained by the dimensions of the 
+box of focus.
+
+The "Insert" button allows you to put a new inner box in the box of focus, 
+assuming the box of focus already has two or more inner boxes.
+
+The "Empty" button empties out the box of focus. Any content and any inner 
+boxes are destroyed. The box currently in focus is not destroyed, but is 
+now empty.
+
+The "Delete" button REMOVES the box currently in focus. Anything inside the 
+box is destroyed, but so is the box itself. If the box's container box has 
+only two children , the delete button will not do anything. Any container that 
+has any inner boxes must have at least two child boxes.
+
+The "Copy->clip" and "Clip->box" are essentially COPY and PASTE buttons. The 
+"Copy->clip" button creates a new item in what I call the clipboard area. You must 
+give a short name to this new item. This item contains a copy of the box itself, 
+any inner boxes, any content (photos or text), any content inside an inner box 
+inside the box, and so on, a full copy of everything inside the box currently in
+focus.
+The "Clip->box" button takes you to the "Clipboard" user panel, a list of items 
+that you copied into the clipboard is displayed, with the short descriptive names you 
+chose for each item. Pick one of these items and everything inside that item 
+is copied over to the current box in focus (any old content previously there is 
+overwritten).
+
+The "PrintCSS" button displays the CSS and HTML for the web page you have built up
+so far. You may copy it over to an editor and save it to a file. If you happen to 
+be a CSS developer, the "PrintCSS" feature allows you to use Javascript DRAW like
+a CSS framework.
+
+
+OK NOW, about the available photos and plain text and formatted HTML text. You 
+want your own text and photos, not the text samples and photos that came with the 
+package, right? The text samples and photos that come with the package are simply for 
+testing, but you want to create your own web page with your own content.
+Here, I assume you are using the client-side version of Javascript DRAW (you installed
+the DRAW files and directories directly from GitHub to your local desktop) and not
+using a server that is enabling Javascript DRAW (with a server application the process
+for choosing your own photos and text will be different).
+You have to install DRAW with the same sub-directory structure that is on my 
+GitHub account. "page.html" is the file you use to create your web page and practice
+with DRAW. In the same directory that contains "page.html", there must be the 
+sub-directories /code and /photos.
+I am assuming that the majority of users of Javascript DRAW do not know Javascript 
+at all and maybe know just a tiny bit of HTML and CSS. There will be other users 
+who know a fair amount of CSS and only a little bit of Javascript.
+Therefore: do not touch any files inside the /code subdirectory. Just don't.
+
+You have to make changes to the photos subdirectory. Any images you want must go 
+in this directory.
+And that is not enough. Any images (or samples of text) that you want to 
+be available in the inventory page must be registered. Every image or text sample
+that is registered is registered in the file content.js, in the main directory where
+page.html is located.
+That means that you have to edit content.js.
+My hope is, by looking at how the test photos and test text samples are registered
+in the file content.js, you'll probably figure it out. 
+
+When you register a photo in content.js, it looks like this
+imageexample("food05.jpg","Glass of beer");
+First is the name of the file. Second, a short description is required.
+Do not type "photos/food05.jpg". Just type "food05.jpg".
+
+When you register a sample of plain text or HTML-formatted text, it looks like:
+htmlexample(
+`BLA BLA BLA BLA BLA 
+BLA BLA BLA BLA
+BLA BLA BLA BLA`,
+"Put short description of text sample here");
+
+Notice the use of the back tick, or back quote, `.
+That is so that the BLA-BLA-BLA can include regular quotes.
+What is BLA-BLA? You can type plain text if you want, but it is treated 
+as HTML. So you can include HTML markup if you want ( <h> , <h5> , <em> and so on).
+
+Basically, you register your desired images and desired text samples by doing 
+the exact same thing I did to register the test images and test text snippets, and 
+by doing it in the same file, content.js, in the same directory as page.html.
+
+Once you have practiced using this product several times, and if you are confident 
+you know what you are doing, there is another file you may edit, some_options.js,
+but do so carefully. You may want to change the width and height of the main box, 
+that contains all the other boxes you create. That configuration is in 
+some_options.js. some_options.js is also in the same directory as page.html.
+
+I put some_options.js and content.js in the main directory, where page.html is 
+located, because I do not want end-users wading through the main Javascript files
+in the /code sub-directory. I will continue to test and debug this product, and 
+multiple deployments out there where several users have chosen to make different 
+changes to the main Javascript files will make reporting of bugs a lot harder.
+
+Although I have named this product "Javascript DRAW", that is because it is 
+implemented in Javascript. This product is intended for users who do not know any
+Javascript. It helps to know at least a little bit of HTML and CSS, but a kid who is
+totally new to HTML and CSS can learn to use this product surprisingly quickly.
+
+
+
